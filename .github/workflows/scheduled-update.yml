@@ -1,5 +1,5 @@
 # .github/workflows/scheduled-update.yml
-name: Trigger Site Rebuild on a CRON Schedule
+name: Trigger Didomi SDK Update
 
 on:
   schedule:
