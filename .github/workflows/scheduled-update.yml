@@ -12,8 +12,23 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  check:
+    name: Check Didomi SDK version
+    runs-on: ubuntu-latest
+    outputs:
+      continue: ${{ steps.check.outputs.continue }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Check Didomi SDK version
+        id: check
+        run: echo "continue=$(bash .github/scripts/check_didomi_sdk.sh)" >> $GITHUB_OUTPUT
+
   build:
-    name: Trigger Didomi SDK Update
+    name: Update & Build Didomi SDK
+    needs: [check]
+    if: ${{ needs.check.outputs.continue == 'yes' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
