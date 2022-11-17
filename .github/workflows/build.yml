@@ -3,8 +3,6 @@ name: Build application
 
 on:
   pull_request:
-  push:
-    - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
