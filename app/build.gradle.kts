@@ -31,6 +31,12 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 
+    configurations {
+        all {
+            exclude(group = "androidx.lifecycle", module = "lifecycle-viewmodel-ktx")
+        }
+    }
+
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
