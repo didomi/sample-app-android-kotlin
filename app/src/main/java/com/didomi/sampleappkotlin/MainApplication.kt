@@ -8,9 +8,11 @@ import io.didomi.sdk.DidomiInitializeParameters
 import io.didomi.sdk.events.ConsentChangedEvent
 import io.didomi.sdk.events.EventListener
 
-const val TAG = "Didomi - Sample App"
-
 class MainApplication : Application() {
+
+    companion object {
+        private const val TAG = "Didomi - Sample App"
+    }
 
     private var didomiEventListener: EventListener? = null
 

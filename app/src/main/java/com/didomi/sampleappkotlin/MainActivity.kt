@@ -17,6 +17,12 @@ import io.didomi.sdk.events.EventListener
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        private const val TAG = "Didomi - Sample App"
+    }
+
+    private val didomi = Didomi.getInstance()
+
     private var interstitialAd: InterstitialAd? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,21 +39,18 @@ class MainActivity : AppCompatActivity() {
         buttonWebView.setOnClickListener { showWebView() }
         buttonAd.setOnClickListener { showAd() }
 
-        Didomi.getInstance().setupUI(this)
+        didomi.setupUI(this)
 
-        //loadAd()
         prepareAd()
     }
 
     private fun showPurposesPreferences() {
-        val didomi = Didomi.getInstance()
         didomi.onReady {
             didomi.showPreferences(this)
         }
     }
 
     private fun showVendorsPreferences() {
-        val didomi = Didomi.getInstance()
         didomi.onReady {
             didomi.showPreferences(this, "vendors")
         }
@@ -110,7 +113,6 @@ class MainActivity : AppCompatActivity() {
      * Consent rejects Ads: the ad cache will be purged (no ad on first click after reject)
      */
     private fun prepareAd() {
-        val didomi = Didomi.getInstance()
         didomi.onReady {
             loadAd()
 
