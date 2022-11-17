@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Sample App Kotlin"
-include ':app'
+include(":app")
