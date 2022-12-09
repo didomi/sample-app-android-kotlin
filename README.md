@@ -1,8 +1,8 @@
-#  Didomi - Android App Sample (Kotlin)
+#  Didomi - Android Sample App (Kotlin)
 
 ## Description
 
-**This app sample demonstrates how to implement Didomi in a simple Android Studio project using Kotlin.**
+**This sample app demonstrates how to implement Didomi in a simple Android Studio project using Kotlin.**
 
 In particular, it shows how to:
 * Condition a custom vendor to consent
