@@ -53,5 +53,5 @@ jobs:
           author_email: "nicolas.chaix@didomi.io"
           author_name: "Nicolas CHAIX"
           branch: ${{ github.ref }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
           message: "Update Didomi SDK dependency"
