@@ -50,8 +50,8 @@ jobs:
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
-          author_email: "cmp-mobile@didomi.io"
-          author_name: "Auto-Bot"
+          author_email: "nicolas.chaix@didomi.io"
+          author_name: "Nicolas CHAIX"
           branch: ${{ github.ref }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           message: "Update Didomi SDK dependency"
