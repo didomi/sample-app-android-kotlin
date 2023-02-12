@@ -43,7 +43,7 @@ android {
 }
 
 dependencies {
-    implementation("io.didomi.sdk:android:1.73.0")
+    implementation("io.didomi.sdk:android:1.74.0")
 
     implementation("androidx.core:core-ktx:1.9.0")
 
