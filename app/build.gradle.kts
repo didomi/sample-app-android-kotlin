@@ -47,6 +47,6 @@ dependencies {
 
     implementation("androidx.core:core-ktx:1.9.0")
 
-    implementation("com.google.android.gms:play-services-ads:21.4.0")
-    implementation("com.google.android.material:material:1.7.0")
+    implementation("com.google.android.gms:play-services-ads:21.5.0")
+    implementation("com.google.android.material:material:1.8.0")
 }
