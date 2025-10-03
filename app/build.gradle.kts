@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk = 34
+    compileSdk = 36
     namespace = "com.didomi.sampleappkotlin"
 
     defaultConfig {
-        minSdk = 21
-        targetSdk = 34
+        minSdk = 23
+        targetSdk = 36
 
         versionCode = 1
         versionName = "1.0"
@@ -26,24 +26,20 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    configurations {
-        all {
-            exclude(group = "androidx.lifecycle", module = "lifecycle-viewmodel-ktx")
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
         }
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 }
 
 dependencies {
     implementation("io.didomi.sdk:android:2.30.0")
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("com.google.android.gms:play-services-ads:23.3.0")
-    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.core:core-ktx:1.17.0")
+    implementation("com.google.android.gms:play-services-ads:24.6.0")
+    implementation("com.google.android.material:material:1.13.0")
 }
