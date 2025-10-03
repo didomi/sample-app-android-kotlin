@@ -61,8 +61,8 @@ class MainApplication : Application() {
     private fun loadVendor() {
         val vendorId = "c:customven-gPVkJxXD"
         val didomi = Didomi.getInstance()
-        val status = didomi.userStatus
-        val isVendorEnabled = status.vendors.global.enabled.contains(vendorId)
+        val status = didomi.currentUserStatus
+        val isVendorEnabled = status.vendors[vendorId]?.enabled ?: false
 
         // Remove any existing event listener
         didomiEventListener?.let {
