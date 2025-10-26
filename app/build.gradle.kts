@@ -38,7 +38,7 @@ android {
 }
 
 dependencies {
-    implementation("io.didomi.sdk:android:2.31.1")
+    implementation("io.didomi.sdk:android:2.32.0")
     implementation("androidx.core:core-ktx:1.17.0")
     implementation("com.google.android.gms:play-services-ads:24.6.0")
     implementation("com.google.android.material:material:1.13.0")
