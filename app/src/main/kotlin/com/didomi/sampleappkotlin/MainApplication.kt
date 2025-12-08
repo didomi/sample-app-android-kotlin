@@ -59,7 +59,7 @@ class MainApplication : Application() {
     }
 
     private fun loadVendor() {
-        val vendorId = "c:customven-gPVkJxXD"
+        val vendorId = "customven-gPVkJxXD"
         val didomi = Didomi.getInstance()
         val status = didomi.currentUserStatus
         val isVendorEnabled = status.vendors[vendorId]?.enabled ?: false
