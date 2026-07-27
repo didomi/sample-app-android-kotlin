@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk = 36
+    compileSdk = 37
     namespace = "com.didomi.sampleappkotlin"
 
     defaultConfig {
         minSdk = 23
-        targetSdk = 36
+        targetSdk = 37
 
         versionCode = 1
         versionName = "1.0"
@@ -38,8 +38,8 @@ android {
 }
 
 dependencies {
-    implementation("io.didomi.sdk:android:2.45.0")
-    implementation("androidx.core:core-ktx:1.17.0")
-    implementation("com.google.android.gms:play-services-ads:24.8.0")
-    implementation("com.google.android.material:material:1.13.0")
+    implementation("io.didomi.sdk:android:2.46.0")
+    implementation("androidx.core:core-ktx:1.19.0")
+    implementation("com.google.android.gms:play-services-ads:25.4.0")
+    implementation("com.google.android.material:material:1.14.0")
 }
